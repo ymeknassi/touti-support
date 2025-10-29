@@ -104,10 +104,30 @@ nav {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+  background-image: url('../images/background2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
@@ -147,23 +167,28 @@ nav {
 }
 
 .btn-primary {
-  background-color: white;
-  color: var(--primary-red);
+  background-color: var(--primary-red);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-color: #B71C1C;
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--text-primary);
   border: 2px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Container */
@@ -288,6 +313,69 @@ p {
   height: 150px;
   width: auto;
   border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.card-value-group {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--light-bg);
+  border-radius: 12px;
+}
+
+.card-value-group h4 {
+  margin-bottom: 1rem;
+  color: var(--primary-red);
+  text-align: center;
+}
+
+.card-value-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.card-value-row img {
+  height: 120px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.zero-value-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.suit-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.suit-group-title {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.suit-cards {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.suit-cards img {
+  height: 100px;
+  width: auto;
+  border-radius: 6px;
   box-shadow: var(--shadow);
 }
 
