@@ -376,11 +376,12 @@ p {
 
 .suit-hand {
   display: flex;
-  margin: 1.5rem 0;
-  justify-content: center;
+  margin: 1.5rem auto;
+  justify-content: flex-start;
   width: 100%;
-  max-width: 100%;
+  max-width: 900px;
   overflow: visible;
+  padding: 0 20px;
 }
 
 .suit-hand img {
@@ -389,7 +390,7 @@ p {
   flex-shrink: 0;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin-left: -5%;
+  margin-left: -50px;
   transition: transform 0.2s ease;
 }
 
@@ -402,23 +403,54 @@ p {
   z-index: 10;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
+  .suit-hand {
+    max-width: 700px;
+  }
   .suit-hand img {
-    margin-left: -8%;
+    height: 120px;
+    margin-left: -45px;
   }
 }
 
 @media (max-width: 768px) {
+  .suit-hand {
+    max-width: 550px;
+  }
   .suit-hand img {
     height: 100px;
-    margin-left: -12%;
+    margin-left: -40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .suit-hand {
+    max-width: 450px;
+    padding: 0 10px;
+  }
+  .suit-hand img {
+    height: 80px;
+    margin-left: -32px;
   }
 }
 
 @media (max-width: 480px) {
+  .suit-hand {
+    max-width: 350px;
+  }
   .suit-hand img {
-    height: 70px;
-    margin-left: -15%;
+    height: 65px;
+    margin-left: -26px;
+  }
+}
+
+@media (max-width: 380px) {
+  .suit-hand {
+    max-width: 300px;
+  }
+  .suit-hand img {
+    height: 55px;
+    margin-left: -22px;
   }
 }
 
